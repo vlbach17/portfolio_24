@@ -7,10 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
+
+# Build output
 dist
 dist-ssr
+build
+
+# Local environment files
 *.local
+.env
+.env.local
+.env.*.local
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +31,62 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# MacOS specific files
+.DS_Store
+
+# Linux specific files
+*.swp
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional Prettier log
+.prettier.log
+
+# Coverage directory used by testing tools
+coverage
+
+# Output of `npm pack`
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Serverless directories
+.serverless/
+
+# IDE specific files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.bak
+*.orig
+
+# Parcel cache
+.cache
+
+# Vite cache
+.vite
+
+# TypeScript cache
+*.tsbuildinfo
+
+# VS Code workspace storage
+.vscode/[^e]*

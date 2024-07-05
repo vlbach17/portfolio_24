@@ -1,0 +1,17 @@
+// adjust rgba to display solid rgb
+@mixin graceful-color($prop, $color) {
+    @if alpha($color) < 1 {
+        #{$prop}: opacify($color, 1);
+    }
+
+    #{$prop}: $color;
+}
+
+// text stroke with shadow
+// @mixin text-stroke($size, $color) {
+//     @if alpha($color) < 1 {
+//         #{$prop}: $color;
+//     }
+
+//     #{$prop}: $color;
+// }

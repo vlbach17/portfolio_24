@@ -1,0 +1,125 @@
+@import "fonts";
+
+$min-contrast-ratio: 4.1 !default;
+
+$primary: #f5b5cb;
+$secondary: #5957c7;
+$tertiary: #f79e02;
+$yellow: #ffcd29;
+$green: #BEDB53;
+$aqua: #9BFDEA;
+$purple: #6300e8;
+$light: #efe8f2;
+$dark: mix(white, #2f2504, 3%);
+$black: #2f2504;
+$white: #fff;
+$gray: #fefefe;
+$gray-600: mix(black, $gray, 50%);
+$dark-green: mix(black, $green, 35%);
+//
+$danger: #ED749F;
+$info: #eee;
+$warning: #f79e02;
+
+//
+$body-bg: #efe8f2;
+$body-color: #150c16;
+$header-bg-color: linear-gradient(160deg, rgba(246, 244, 249, 1) 0%, rgba(255, 254, 255, 1) 80%, rgba(246, 244, 249, 1) 100%);
+;
+
+// links
+$nav-link-color: $purple;
+$nav-link-hover-color: $black;
+$nav-link-active-color: $secondary;
+$nav-link-disabled-color: $black;
+$link-color: $black;
+$link-hover-color: $black;
+$link-active-color: $light;
+$dropdown-link-color: $black;
+$component-active-color: $secondary !default;
+$dropdown-link-active-color: $component-active-color;
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"danger": $danger,
+	"light": $light,
+	"dark": $dark,
+	"gray-100": $gray,
+	) !default;
+
+$theme-colors: map-merge($theme-colors, ("tertiary": $tertiary)
+);
+// container size variables
+/* bs break points */
+$grid-breakpoints: (
+	xs: 0,
+	sm: 26.25em,
+	md: 48em,
+	lg: 60em,
+	xl: 71.25em,
+	xxl: 82.5em,
+);
+
+// begin fonts
+// base font styles
+$headings-font-family: "FrauncesBlack";
+$heading-font: "FrauncesBlack";
+$headings-line-height: 1;
+$body-font: "Nunito";
+$btn-font: "Space Mono";
+$accent-font: 'VT323';
+
+// base font sizes
+$font-size-base: 1rem;
+$font-family-base: $body-font, helevetica, sans-serif;
+
+// button font sizes
+
+
+// base font weights
+$font-weight-lighter: 200;
+$font-weight-bolder: 800;
+
+/* heading font sizes */
+$font-sizes: (
+	1: 8rem,
+	2: 7.5rem,
+	3: 7rem,
+	4: 5rem,
+	5: 3rem,
+	6: 2rem,
+);
+
+// display font sizes
+$display-font-sizes: (
+	1: 8.5rem,
+	2: 7.5rem,
+	3: 6rem,
+	4: 5rem,
+	5: 3rem,
+	6: 2.5rem,
+);
+
+// breadcrumb styles
+$breadcrumb-font-size: 1rem;
+
+/* spacing */
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	5: $spacer * 3,
+);
+
+$display-font-weight: 400;
+$display-line-height: $headings-line-height;
+
+// tooltips
+$tooltip-bg: $black;
+$tooltip-border-radius: 3px;
+$tooltip-font-size: 0.75rem;
+$tooltip-color: $white;
+$tooltip-font-weight: 700;
