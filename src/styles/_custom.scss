@@ -1,8 +1,4 @@
 // body
-.container-fluid {
-	max-width: calc(100vw - 8vw);
-}
-
 // font styles 
 h1 {
 	font-family: $heading-font;
@@ -140,42 +136,18 @@ nav.navbar {
 	}
 }
 
-// $start-color: #e74b82;
-// $end-color: #F5BC00;
-// $num-shades: 2;
-// $colors: (
-// );
-// $headingTextShadow: (
-// );
 
-// @for $i from 0 through $num-shades - 1 {
-// 	$ratio: calc($i / ($num-shades - 1));
-// 	$color: mix($start-color, $end-color, $ratio * 100%);
-// 	$colors: append($colors, $color, comma);
-// }
-
-// @debug $colors;
-
-// @for $i from 1 through $num-shades {
-// 	$num: calc($i * 15) + px;
-// 	$blur: 0 + px;
-// 	$shadowColor: nth($colors, $i);
-// 	$theShadow: $num $num $blur $shadowColor;
-// 	$headingTextShadow: append($headingTextShadow, $theShadow, comma);
-// }
-
-
-// page heros
+// global page header
 #vb-page-header,
 .vb-page-container {
 
 	.container-lg,
-	.container {
+	.container-md {
 		background: $header-bg-color;
 		border: 1px solid black;
 		border-radius: 3px;
 		box-shadow: 5px 5px 0 $dark;
-
+		max-width: min(75%, 75em);
 	}
 
 	.vb-page-header-start-bar {
@@ -220,103 +192,77 @@ nav.navbar {
 			}
 		}
 	}
-}
 
-// routed page wrapper
-.vb-page-content-wrapper {}
-
-// typed.js
-#typed-strings {
-	display: inline;
-}
-
-// tooltips
-@mixin tooltipColor ($tbgColor, $textColor) {
-	$tooltip-bg: $tbgColor;
-
-	.tooltip-inner {
-		color: $textColor;
-		background-color: $tooltip-bg;
-		font-size: $tooltip-font-size;
-	}
-
-	.tooltip-arrow::before {
-		border-top-color: $tooltip-bg;
-	}
-}
-
-.tooltip .tooltip-inner {
-	font-size: $tooltip-font-size;
-	font-weight: $tooltip-font-weight;
-}
-
-.tooltip.tooltip-secondary {
-	@include tooltipColor($aqua, $black);
-}
-
-.tooltip.tooltip-dark {
-	@include tooltipColor($secondary, $white );
-}
-
-.tooltip.tooltip-yellow {
-	@include tooltipColor($yellow, $black );
-}
-
-//breadcrumbs
-.breadcrumb {
-	.breadcrumb-item {
-		font-family: $accent-font;
+	.vb-page-content-wrapper {
+		display: flex;
+		justify-content: center;
 	}
 }
 
 // homepage
 // homepage header
-
-$responsive-page-heading-size: calc(1rem + 8.1vw);
-
 .vb-page-header,
 .vb-page-container {
 	.row {
 		width: 100%;
 		max-width: 100%;
-
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.vb-page-header-content {
-		max-width: 80%;
-		flex-basis: 80%;
+		flex: 0 0 100%;
 	}
 
 	.vb-page-header-sidebar {
-		max-width: 20%;
-		flex-basis: 20%;
-		align-self: end;
-		margin-bottom: 2em;
+		flex: 0 0 100%;
+		align-self: center;
+		width: 100%;
+		display: flex;
 
 		.row {
 			justify-content: space-between;
-			align-items: end;
+			align-items: flex-end;
 		}
 
-		.col-12 {
+		div[class^="col-"] {
 			display: flex;
-			justify-content: flex-end;
+			justify-content: end;
 			align-items: center;
+			flex-direction: column;
 		}
 
-		.vb-page-header-img {
-			max-height: 70px;
-			width: auto;
+		.vb-icon-btn-wrapper {
+			.vb-icon-btn {
+				cursor: pointer;
+				object-fit: contain;
+				height: 100px;
+			}
+
+			.vb-icon-btn-label {
+				text-align: center;
+				font-size: 0.9rem;
+				letter-spacing: 0.1em;
+				font-family: $btn-font;
+				text-transform: uppercase;
+			}
+		}
+
+		span {
+			font-family: $accent-font;
+			display: block;
+			text-align: center;
+			margin: 0.3em;
+			font-size: 1.15rem;
 		}
 	}
 
-	.typed-strings-container {
-		display: block;
-	}
+	@media (max-width: 992px) {
 
-	.typed-cursor--blink,
-	.typed-cursor {
-		color: $dark;
+		.vb-page-header-content,
+		.vb-page-header-sidebar {
+			flex: 0 0 100%;
+		}
 	}
 
 	.vb-page-heading {
@@ -329,7 +275,8 @@ $responsive-page-heading-size: calc(1rem + 8.1vw);
 		display: block;
 		color: $secondary;
 		text-transform: uppercase;
-		font-size: $responsive-page-heading-size !important;
+		font-size: 2.5rem;
+		font-size: clamp(2.5rem, 0.4545454545454546rem + 10.227272727272727vw, 8.125rem);
 		font-family: $heading-font;
 		line-height: 1.2;
 		letter-spacing: 0.1em;

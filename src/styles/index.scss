@@ -52,14 +52,14 @@ $theme-colors: map-merge($theme-colors, ("tertiary": $tertiary)
 );
 // container size variables
 /* bs break points */
-$grid-breakpoints: (
-    xs: 0,
-    sm: 26.25em,
-    md: 48em,
-    lg: 60em,
-    xl: 71.25em,
-    xxl: 82.5em,
-);
+// $grid-breakpoints: (
+//     xs: 0,
+//     sm: 26.25em,
+//     md: 48em,
+//     lg: 60em,
+//     xl: 71.25em,
+//     xxl: 82.5em,
+// );
 
 // begin fonts
 // base font styles
@@ -126,8 +126,8 @@ $tooltip-color: $black;
 $tooltip-font-weight: 700;
 
 
-@import "./functions.scss";
+@import "./functions";
 @import "./utilities";
-@import "./fonts.scss";
+@import "./fonts";
 @import './mixins';
-@import "./custom.scss";
+@import "./custom";

@@ -57,11 +57,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 export function App() {
   return (
     <div>
-      <div
-        id="vb-page-header"
-        className="vb-page-header container-fluid py-lg-1 px-lg-2 my-5"
-      >
-        <div className="container-lg p-0">
+      <div className="vb-page-container container-fluid py-lg-1 px-lg-2 my-5 flex flex-column justify-content-center">
+        <div className="container-md mx-sm-0 mx-lg-auto p-0">
           <NavigationBar />
           <div className="p-4 vb-page-content-wrapper">
             <Routes>

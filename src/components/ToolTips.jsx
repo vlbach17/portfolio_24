@@ -2,7 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { Tooltip } from 'bootstrap';
 import PropTypes from 'prop-types';
 
-function ToolTipComponent({ title, placement, tooltipstyles, children }) {
+function ToolTipComponent({
+  title = 'Hey, Whats Up?...Hello',
+  placement = 'top',
+  tooltipstyles = 'tooltip-primary',
+  children,
+}) {
   const tooltipRef = useRef(null);
   useEffect(() => {
     const tooltip = new Tooltip(tooltipRef.current, {
@@ -13,6 +18,7 @@ function ToolTipComponent({ title, placement, tooltipstyles, children }) {
 
     return () => {
       tooltip.dispose();
+      console.log('tooltip fired.');
     };
   }, [title, placement, tooltipstyles]);
 
@@ -31,12 +37,6 @@ ToolTipComponent.propTypes = {
   placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   tooltipstyles: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-};
-
-ToolTipComponent.defaultProps = {
-  title: 'uh oh, are you lost?',
-  placement: 'bottom',
-  tooltipstyles: 'tooltip-styles',
 };
 
 export default ToolTipComponent;

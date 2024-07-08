@@ -1,0 +1,55 @@
+// src/styles/_utilities.scss
+
+// typed.js
+#typed-strings {
+    display: inline;
+}
+
+.typed-strings-container {
+    display: block;
+    max-width: max-content;
+}
+
+.typed-cursor--blink,
+.typed-cursor {
+    color: $dark;
+}
+
+// tooltips
+@mixin tooltipColor ($tbgColor, $textColor) {
+    $tooltip-bg: $tbgColor;
+
+    .tooltip-inner {
+        color: $textColor;
+        background-color: $tooltip-bg;
+        font-size: $tooltip-font-size;
+    }
+
+    .tooltip-arrow::before {
+        border-top-color: $tooltip-bg;
+    }
+}
+
+.tooltip .tooltip-inner {
+    font-size: $tooltip-font-size;
+    font-weight: $tooltip-font-weight;
+}
+
+.tooltip.tooltip-secondary {
+    @include tooltipColor($aqua, $black);
+}
+
+.tooltip.tooltip-dark {
+    @include tooltipColor($secondary, $white );
+}
+
+.tooltip.tooltip-yellow {
+    @include tooltipColor($yellow, $black );
+}
+
+//breadcrumbs
+.breadcrumb {
+    .breadcrumb-item {
+        font-family: $accent-font;
+    }
+}

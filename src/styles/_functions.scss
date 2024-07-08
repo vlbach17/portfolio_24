@@ -1,0 +1,23 @@
+// $start-color: #e74b82;
+// $end-color: #F5BC00;
+// $num-shades: 2;
+// $colors: (
+// );
+// $headingTextShadow: (
+// );
+
+// @for $i from 0 through $num-shades - 1 {
+// 	$ratio: calc($i / ($num-shades - 1));
+// 	$color: mix($start-color, $end-color, $ratio * 100%);
+// 	$colors: append($colors, $color, comma);
+// }
+
+// @debug $colors;
+
+// @for $i from 1 through $num-shades {
+// 	$num: calc($i * 15) + px;
+// 	$blur: 0 + px;
+// 	$shadowColor: nth($colors, $i);
+// 	$theShadow: $num $num $blur $shadowColor;
+// 	$headingTextShadow: append($headingTextShadow, $theShadow, comma);
+// }
